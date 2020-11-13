@@ -15,7 +15,7 @@ CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -o bin/osx/ratelimiter_exampler 
 
 ## curl
 ```
-curl [ip]:[port]
+curl 127.0.0.1
 ```
 
 ## Attack Test
@@ -39,7 +39,7 @@ ok      github.com/miles990/ratelimiter-example 60.062s
 ## 被限流回傳
 403
 ```
-{"count":61,"err":"Error"}
+{"count":61,"err":"over limit error"}
 ```
 
 ## Usage
