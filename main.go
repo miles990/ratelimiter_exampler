@@ -42,9 +42,9 @@ func main() {
 		_, _, err := limiter.Check(c.ClientIP())
 
 		if err != nil {
-			c.JSON(200, gin.H{
+			c.JSON(403, gin.H{
 				"count": global.Num(),
-				"err":   "Error",
+				"err":   err.Error(),
 			})
 			return
 		}
